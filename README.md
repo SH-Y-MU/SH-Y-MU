@@ -1,3 +1,7 @@
+Roadmap and all Work Expain here:
+https://miro.com/app/board/uXjVPWDqHbU=/?share_link_id=103193940020
+
+
 Copy the repo to clone it : https://github.com/SH-Y-MU/SH-Y-MU.git
 
 Then add at terminal your folder example: cd C:\Users\level\Desktop\FinalProject\SH-Y-MU
