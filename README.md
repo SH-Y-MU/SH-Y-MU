@@ -10,3 +10,5 @@ Now to start working on it rite on your terminal:  cd Shymu
 
 
 ![start](https://user-images.githubusercontent.com/104593484/191006262-66dde5d9-0f72-46b0-8c01-2b7b848fac9f.png)
+
+to be continue...
