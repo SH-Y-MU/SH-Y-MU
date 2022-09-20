@@ -1,0 +1,54 @@
+.singInForm{
+    width: 25%;
+    opacity: 100%;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(7, 7, 7);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h6{
+    color: white;
+    display: flex;
+    margin-left: 10px;
+}
+h1{
+    color: white;
+}
+
+button{
+    width: 200px;
+    border: none;
+    padding: 15px 30px;
+    background-color: #7E98F4;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+input{
+    flex: 1;
+    min-width: 40%;
+    margin: 10px 0;
+    padding: 10px;
+    
+}
+
+.signUp{
+    display: flex;
+    margin-bottom: 80px;
+
+}
+
+.error {
+    color: red;
+    font-size: 10px;
+}
