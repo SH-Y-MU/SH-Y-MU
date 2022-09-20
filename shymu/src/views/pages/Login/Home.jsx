@@ -8,10 +8,10 @@ function App() {
   return (
     <div>
 
-   <h1>heloo</h1>
+   <h2>hellouuuu</h2>
         
 
-        </div>
+    </div>
   );
 }
 
