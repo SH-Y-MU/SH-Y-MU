@@ -1,7 +1,8 @@
 
 import React, { useState } from "react";
 import './Login.css'
-import Home from "./Home";
+import Dashboard from "../Dashboard/Dashboard";
+
 
 
 
@@ -36,7 +37,7 @@ function App() {
     if (userData) {
       if (userData.password !== pass.value) {
 
-      // Invalid password
+        // Invalid password
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
         setIsSubmitted(true);
@@ -57,28 +58,29 @@ function App() {
   const renderForm = (
 
     <form className='singInForm' onSubmit={handleLogin}>
-        <h1>Let's get you in!</h1>
-    <div>
-        <input type= "text" placeholder="username" name="uname" required /> <br></br>
-            {renderErrorMessage("uname")}
-            <input placeholder="password" type="password" name="pass" required />
-            {renderErrorMessage("pass")}
-    </div>
-    <div>
+      <h1>Let's get you in!</h1>
+      <div>
+        <input type="text" placeholder="username" name="uname" required /> <br></br>
+        {renderErrorMessage("uname")}
+        <input placeholder="password" type="password" name="pass" required />
+        {renderErrorMessage("pass")}
+      </div>
+      <div>
         <button type="submit" className="logIn">LogIn</button>
-        <h6>Don't have an account?<span style={{color: '#7E98F4'}}> Sign up</span></h6>
-    </div>
+        <h6>Don't have an account?<span style={{ color: '#7E98F4' }}> Sign up</span></h6>
+      </div>
     </form>
-    
+
   );
 
+  /* Redirection location when user is correct. Change later */
   return (
-      <div className="login-form">
-        {isSubmitted ? 
-        <Home/>
+    <div className="login-form">
+      {isSubmitted ?
+        <Dashboard />
         : renderForm}
-      </div>
-    
+    </div>
+
   );
 }
 
