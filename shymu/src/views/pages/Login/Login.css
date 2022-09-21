@@ -1,18 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-*
-{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
-
-
-
-
-.body 
-{
+.body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,8 +14,7 @@
 	flex-direction: column;
 	background: #23242a;
 }
-.box 
-{
+.box {
 	position: relative;
 	width: 380px;
 	height: 420px;
@@ -29,9 +22,8 @@
 	border-radius: 8px;
 	overflow: hidden;
 }
-.box::before 
-{
-	content: '';
+.box::before {
+	content: "";
 	z-index: 1;
 	position: absolute;
 	top: -50%;
@@ -39,12 +31,11 @@
 	width: 380px;
 	height: 420px;
 	transform-origin: bottom right;
-	background: linear-gradient(0deg,transparent,#7E98F4,#7E98F4);
+	background: linear-gradient(0deg, transparent, #7e98f4, #7e98f4);
 	animation: animate 6s linear infinite;
 }
-.box::after 
-{
-	content: '';
+.box::after {
+	content: "";
 	z-index: 1;
 	position: absolute;
 	top: -50%;
@@ -52,13 +43,12 @@
 	width: 380px;
 	height: 420px;
 	transform-origin: bottom right;
-	background: linear-gradient(0deg,transparent,#7E98F4,#7E98F4);
+	background: linear-gradient(0deg, transparent, #7e98f4, #7e98f4);
 	animation: animate 6s linear infinite;
 	animation-delay: -3s;
 }
 
-.boxRegister
-{
+.boxRegister {
 	position: relative;
 	width: 380px;
 	height: 780px;
@@ -67,9 +57,8 @@
 	overflow: hidden;
 	margin: 25px;
 }
-.boxRegister::before 
-{
-	content: '';
+.boxRegister::before {
+	content: "";
 	z-index: 1;
 	position: absolute;
 	top: -50%;
@@ -77,12 +66,11 @@
 	width: 380px;
 	height: 820px;
 	transform-origin: bottom right;
-	background: linear-gradient(0deg,transparent,#7E98F4,#7E98F4);
+	background: linear-gradient(0deg, transparent, #7e98f4, #7e98f4);
 	animation: animate 6s linear infinite;
 }
-.boxRegister::after 
-{
-	content: '';
+.boxRegister::after {
+	content: "";
 	z-index: 1;
 	position: absolute;
 	top: -50%;
@@ -90,24 +78,20 @@
 	width: 380px;
 	height: 820px;
 	transform-origin: bottom right;
-	background: linear-gradient(0deg,transparent,#7E98F4,#7E98F4);
+	background: linear-gradient(0deg, transparent, #7e98f4, #7e98f4);
 	animation: animate 6s linear infinite;
 	animation-delay: -3s;
 }
 
-@keyframes animate 
-{
-	0%
-	{
+@keyframes animate {
+	0% {
 		transform: rotate(0deg);
 	}
-	100%
-	{
+	100% {
 		transform: rotate(360deg);
 	}
 }
-form 
-{
+form {
 	position: absolute;
 	inset: 2px;
 	background: #28292d;
@@ -117,21 +101,17 @@ form
 	display: flex;
 	flex-direction: column;
 }
-h1
-{
+h1 {
 	color: white;
 	font-weight: 400;
 	text-align: center;
-	
 }
-.inputBox 
-{
+.inputBox {
 	position: relative;
 	width: 300px;
 	margin-top: 35px;
 }
-.inputBox input 
-{
+.inputBox input {
 	position: relative;
 	width: 100%;
 	padding: 20px 10px 10px;
@@ -145,8 +125,7 @@ h1
 	transition: 0.5s;
 	z-index: 10;
 }
-.inputBox span 
-{
+.inputBox span {
 	position: absolute;
 	left: 0;
 	padding: 20px 0px 10px;
@@ -157,14 +136,12 @@ h1
 	transition: 0.5s;
 }
 .inputBox input:valid ~ span,
-.inputBox input:focus ~ span 
-{
+.inputBox input:focus ~ span {
 	color: #8f8f8f;
 	transform: translateX(0px) translateY(-34px);
 	font-size: 0.75em;
 }
-.inputBox i 
-{
+.inputBox i {
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -178,62 +155,55 @@ h1
 	z-index: 9;
 }
 .inputBox input:valid ~ i,
-.inputBox input:focus ~ i 
-{
+.inputBox input:focus ~ i {
 	height: 44px;
 }
-.links 
-{
+.links {
 	display: flex;
 	justify-content: space-between;
 }
-.links a 
-{
+.links a {
 	margin: 10px 0;
 	font-size: 0.75em;
 	color: #8f8f8f;
 	text-decoration: beige;
 }
-.links a:hover, 
-.links a:nth-child(2)
-{
-	color: #7E98F4;
+.links a:hover,
+.links a:nth-child(2) {
+	color: #7e98f4;
 }
-input[type="submit"]
-{
-    width: 200px;
-    border: none;
-    padding: 15px 30px;
-    background-color: #7E98F4;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: bolder;
-    color: white;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-left: 50px;
-    align-items: center !important; 
-    justify-content: center;
+input[type="submit"] {
+	width: 200px;
+	border: none;
+	padding: 15px 30px;
+	background-color: #7e98f4;
+	border-radius: 50px;
+	font-size: 15px;
+	font-weight: bolder;
+	color: white;
+	cursor: pointer;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	margin-left: 50px;
+	align-items: center !important;
+	justify-content: center;
 }
-input[type="submit"]:active 
-{
+input[type="submit"]:active {
 	opacity: 0.8;
 }
 
 .error {
-    color: red;
-    font-size: 10px;
+	color: red;
+	font-size: 10px;
 }
 
-img{
-    width: 200px;
-    height: auto;
-    padding-bottom: 10px;
-   
+img {
+	width: 200px;
+	height: auto;
+	padding-bottom: 10px;
 }
 
-h6{
+h6 {
 	color: white;
 	margin-top: 20px;
 }
