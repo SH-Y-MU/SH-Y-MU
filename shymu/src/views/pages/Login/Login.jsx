@@ -1,7 +1,9 @@
 
 import React, { useState } from "react";
 import './Login.css'
+import Logo from './Logo.png'; 
 import Home from "./Home";
+
 
 
 
@@ -19,31 +21,31 @@ function App() {
   ];
 
   const errors = {
-    uname: "Wrong username",
-    pass: "Wrong password"
+    uname: "invalid username",
+    pass: "invalid password"
   };
 
   const handleLogin = (event) => {
     //Prevent page reload
     event.preventDefault();
 
-    var { uname, pass } = document.forms[0];
+    var { username, pass } = document.forms[0];
 
     // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
+    const userData = database.find((user) => user.username === username.value);
 
     // Compare user info
     if (userData) {
       if (userData.password !== pass.value) {
 
       // Invalid password
-        setErrorMessages({ name: "pass", message: errors.pass });
+        setErrorMessages({ name: "userpass", message: errors.pass });
       } else {
         setIsSubmitted(true);
       }
     } else {
       // Username not found
-      setErrorMessages({ name: "uname", message: errors.uname });
+      setErrorMessages({ name: "username", message: errors.uname });
     }
   };
 
@@ -55,27 +57,43 @@ function App() {
 
 
   const renderForm = (
-
-    <form className='singInForm' onSubmit={handleLogin}>
+    
+    <div className="body">
+      <img src={Logo} alt="Logo" />;
+    <div className="box">
+    <form className='singInForm'  onSubmit={handleLogin}>
         <h1>Let's get you in!</h1>
-    <div>
-        <input type= "text" placeholder="username" name="uname" required /> <br></br>
-            {renderErrorMessage("uname")}
-            <input placeholder="password" type="password" name="pass" required />
-            {renderErrorMessage("pass")}
+          <div className="inputBox">
+            <input type= "text"  name="username" autoComplete="new-password" required />
+            <span>UserName</span>
+				    <i></i>
+            
+            </div>
+            {renderErrorMessage("username")}
+
+    <div className="inputBox">
+            <input  type="password" name="pass" autoComplete="new-password" required />
+            
+            <span>Password</span>
+				    <i></i>
     </div>
-    <div>
-        <button type="submit" className="logIn">LogIn</button>
-        <h6>Don't have an account?<span style={{color: '#7E98F4'}}> Sign up</span></h6>
-    </div>
-    </form>
+            {renderErrorMessage("userpass")}
+    <div className="links">
+				<a href="#">Forgot Password ?</a>
+				<a href="#"> SignUp </a>
+		</div>
+			<input type="submit" value="Login"/>
+        
+      </form>
+      </div>
+      </div>
     
   );
 
   return (
       <div className="login-form">
         {isSubmitted ? 
-        <Home/>
+        <Home />
         : renderForm}
       </div>
     
