@@ -1,5 +1,5 @@
-import "./Login.css";
-import Logo from "./Logo.png";
+import "../Login/Login.css";
+import Logo from "../../../assets/img/Logo.png";
 
 const Register = () => {
 	return (
