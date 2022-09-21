@@ -38,7 +38,7 @@ function App() {
     if (userData) {
       if (userData.password !== pass.value) {
 
-      // Invalid password
+        // Invalid password
         setErrorMessages({ name: "userpass", message: errors.pass });
       } else {
         setIsSubmitted(true);
@@ -90,13 +90,14 @@ function App() {
     
   );
 
+  /* Redirection location when user is correct. Change later */
   return (
       <div className="login-form">
         {isSubmitted ? 
         <Home />
         : renderForm}
-      </div>
-    
+    </div>
+
   );
 }
 
